@@ -1,15 +1,22 @@
 # Velora Experience
 
-A presentation-ready premium hospitality booking experience for Eldoret, Kenya. The demo includes a cinematic customer journey, package and flavour catalogues, guest booking with live price composition, tracking, account views, and an executive operations console.
+A premium hospitality booking and operations platform for Eldoret, Kenya. The retained cinematic Next.js experience is backed by a NestJS API, Prisma and PostgreSQL.
 
 ## Local setup
 
 ```bash
 npm install
+npm --prefix apps/api install
 npm run dev
+# separate terminal
+npm --prefix apps/api run start:dev
 ```
 
 Open `http://localhost:3000`. Production verification uses `npm run lint` and `npm run build`.
+
+Production frontend: https://velora-two-sooty.vercel.app  
+Production API: https://velora-api-production-8cf3.up.railway.app/api  
+Swagger: https://velora-api-production-8cf3.up.railway.app/docs
 
 ## Demo operations login
 
@@ -35,7 +42,9 @@ Deploy as a standard Next.js application on Vercel: install with `npm install`, 
 
 ## Architecture and limitations
 
-This first delivery is a frontend demonstration built with Next.js 16, React 19, TypeScript and Tailwind CSS. Seed data lives in `src/lib/data.ts`; current interaction state is browser-local and the tracking timeline is simulated. A production rollout still requires the requested NestJS/PostgreSQL service, server-side authentication, authoritative persisted pricing and inventory reservations, notifications, payments, audit records, Prisma migrations, and end-to-end tests.
+The root application uses Next.js 16, React 19, TypeScript and Tailwind CSS. `apps/api` uses NestJS 11, Prisma 6 and PostgreSQL. See `ARCHITECTURE.md` and `DEPLOYMENT.md`.
+
+The current API implements authentication, persistent catalogues, authoritative quotes, guest booking, private tracking, analytics, audit-backed status changes and conflict-aware inventory reservations. Live M-Pesa, SMS, WhatsApp and uploads remain intentionally adapter-backed rather than simulated financial transactions.
 
 ## Brand asset
 

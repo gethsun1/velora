@@ -12,6 +12,9 @@ node_modules/
 
 # testing
 /coverage
+dist/
+playwright-report/
+test-results/
 
 # next.js (at any depth)
 .next/
@@ -32,10 +35,16 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
+.railway
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+.env*
+!.env.example
