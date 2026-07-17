@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {Logo,Status} from '@/components/Site';
 import {orders} from '@/lib/data';
+import {TimeGreeting} from '@/components/TimeGreeting';
 
 const menu=['Overview','Orders','Dispatch','Customers','Inventory','Packages','Flavours','Service zones','Staff','Payments','Analytics','Audit log','Settings'];
 
@@ -10,7 +11,7 @@ export default function Admin(){
   <div className="adminLayout">
    <aside className="sidebar">{menu.map((x,i)=><Link key={x} className={i===0?'active':''} href={i===0?'/admin':'/admin#'+x.toLowerCase()}>{x}</Link>)}</aside>
    <section className="adminMain">
-    <div style={{display:'flex',justifyContent:'space-between'}}><div><div className="eyebrow">FRIDAY, 17 JULY</div><h1>Good evening, Mr. Rono.</h1></div><button className="button">+ New booking</button></div>
+    <div style={{display:'flex',justifyContent:'space-between'}}><div><div className="eyebrow">FRIDAY, 17 JULY</div><TimeGreeting/></div><button className="button">+ New booking</button></div>
     <div className="kpis">{[['Revenue today','KSh 86,400','↑ 18.4%'],['Active experiences','8','3 collections due'],['New bookings','12','4 awaiting review'],['Available setups','18 / 32','56% availability']].map(x=><article className="kpi" key={x[0]}><small>{x[0]}</small><b>{x[1]}</b><span className="up">{x[2]}</span></article>)}</div>
     <div className="adminGrid">
      <article className="card"><h3>Revenue this week</h3><small>KSh 384,200 · +12.8% vs last week</small><div className="bars">{[38,56,44,75,62,91,70].map((x,i)=><i key={i} style={{height:x+'%'}}/>)}</div></article>
