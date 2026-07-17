@@ -38,7 +38,7 @@
 @media(max-width:560px){.managementGrid,.settingsGrid{grid-template-columns:1fr}.welcome{display:block}.welcome span{display:block;margin-top:5px}.adminHeading h1{font-size:34px}.dispatchStats>div,.inventoryMeter>div{padding:16px}.toolbar input{min-width:210px}}
 
 /* Editorial backgrounds for the four featured Choose your moment cards. */
-.package{height:auto;aspect-ratio:4/5;background-position:center;background-size:cover;transition:transform .3s,filter .3s}
+.package{height:auto;aspect-ratio:4/5;background-color:#120f12;background-position:center,center;background-size:100% 100%,contain;background-repeat:no-repeat;transition:transform .3s,filter .3s}
 .package:hover{filter:brightness(1.08)}
 .package.plum{background-image:linear-gradient(180deg,#25152228 15%,#170f16f2 100%),url('/images/moment-essential.png')}
 .package.gold{background-image:linear-gradient(180deg,#33230f24 15%,#17120cf2 100%),url('/images/moment-social.png')}
