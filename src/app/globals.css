@@ -36,3 +36,13 @@
  .adminNavToggle{display:block;background:transparent;color:white;border:1px solid #ffffff30;padding:9px 12px}.adminTop>span{font-size:10px!important}.admin .sidebar{display:flex;position:fixed;left:0;top:70px;width:250px;z-index:20;transform:translateX(-105%);transition:.3s}.admin .sidebar.open{transform:none}.adminHeading{flex-direction:column}.adminHeading .button{width:100%;justify-content:space-between}.dispatchStats,.inventoryMeter{grid-template-columns:1fr 1fr}.managementGrid{grid-template-columns:1fr 1fr}.staffGrid{grid-template-columns:1fr}
 }
 @media(max-width:560px){.managementGrid,.settingsGrid{grid-template-columns:1fr}.welcome{display:block}.welcome span{display:block;margin-top:5px}.adminHeading h1{font-size:34px}.dispatchStats>div,.inventoryMeter>div{padding:16px}.toolbar input{min-width:210px}}
+
+/* Editorial backgrounds for the four featured Choose your moment cards. */
+.package{background-position:center;background-size:cover;transition:transform .3s,filter .3s}
+.package:hover{filter:brightness(1.08)}
+.package.plum{background-image:linear-gradient(180deg,#25152228 15%,#170f16f2 100%),url('/images/moment-essential.png')}
+.package.gold{background-image:linear-gradient(180deg,#33230f24 15%,#17120cf2 100%),url('/images/moment-social.png')}
+.package.amber{background-image:linear-gradient(180deg,#42220b14 20%,#1c100bf0 100%),url('/images/moment-rooftop.png')}
+.package.night{background-image:linear-gradient(180deg,#08081320 12%,#090910f2 100%),url('/images/moment-night.png')}
+.package>span,.package h3,.package b{text-shadow:0 2px 18px #000}
+.package small{color:#d2cbc6}.package p{color:#c5bfba}
